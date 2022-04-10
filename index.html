@@ -8,14 +8,12 @@
   <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans:400,400i,700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
   <link rel="stylesheet" href="./assets/css/style.css" />
-  <title>Git it Done</title>
+  <title>Weather Dashboard</title>
 </head>
 
 <body class="flex-column min-100-vh">
   <header class="hero">
-    <h1 class="app-title"><i class="fab fa-github"></i> Git it Done!</h1>
-    <p>Search for a GitHub user or click on a language to see a list of repositories and how many open issues they have!
-    </p>
+    <h1 class="app-title">Weather Dashboard</h1>
   </header>
 
 
@@ -23,17 +21,17 @@
     <div class="col-12 col-md-4">
 
       <div class="card">
-        <h3 class="card-header text-uppercase">Search By User</h3>
+        <h3 class="card-header text-uppercase">Search for a City:</h3>
         <form id="user-form" class="card-body">
-          <label class="form-label" for="username">Username</label>
+          <label class="form-label" for="username"></label>
           <input name="username" id="username" type="text" autofocus="true" class="form-input" />
-          <button type="submit" class="btn">Get User</button>
+          <button type="submit" class="btn">Search</button>
         </form>
       </div>
 
       <div class="card">
-        <h3 class="card-header text-uppercase">Search By Topic</h3>
-        <div id="language-buttons" class="card-body">
+        <h3 class="card-header text-uppercase">Cities Searched:</h3>
+        <div id="cities-searched" class="card-body">
           <button data-language="javascript" class="btn">JavaScript</button>
           <button data-language="html" class="btn">HTML</button>
           <button data-language="css" class="btn">CSS</button>
@@ -42,8 +40,88 @@
     </div>
 
     <div class="col-12 col-md-8">
-      <h2 class="subtitle">Showing Repositories for: <span id="repo-search-term"></span></h2>
-      <div id="repos-container" class="list-group"></div>
+      <h2 class="city-name">City-Name: <span id="city-search-term"></span></h2>
+      <!-- There needs to be an empty HTML element for us to write repository data to. -->
+      <div id="temp-container" class="list-group">Temp: </div>
+      <div id="wind-container" class="list-group">Wind: </div>
+      <div id="humidity-container" class="list-group">Humidity: </div>
+      <div id="UV-container" class="list-group">UV Index: </div>
+    </div>
+
+
+    <div class="mt-4">
+      <h4> 5-Day Forecast</h4>
+    </div>
+
+    <div class="row text-white">
+      <div class="card Day2 col-md-3 m-3 bg-primary shadow" style="max-width: fit-content;">
+        <div class="card-body ">
+          <h5 class="card-title" id="2ndDate">Day 2</h5>
+          <img class="icon pt-4 pb-4" id="icon2" src="" alt="weather icon">
+          <p class="card-text" id="temp2">
+
+          </p>
+          <p class="card-text" id="humidity2">
+
+          </p>
+        </div>
+      </div>
+
+      <div class="card Day3 col-md-3 m-3 bg-primary shadow" style="max-width: fit-content;">
+        <div class="card-body ">
+          <h5 class="card-title" id="3rdDate">Day 3</h5>
+          <img class="icon pt-4 pb-4" id="icon3" src="" alt="weather icon">
+          <p class="card-text" id="temp3">
+            Temp: 86.84&deg
+          </p>
+          <p class="card-text" id="humidity3">
+            Humidity: 43%
+          </p>
+        </div>
+      </div>
+
+      <div class="card Day4 col-md-3 m-3 bg-primary shadow" style="max-width: fit-content;">
+        <div class="card-body ">
+          <h5 class="card-title" id="4thDate">Day 4</h5>
+          <img class="icon pt-4 pb-4" id="icon4" src="" alt="weather icon">
+          <p class="card-text" id="temp4">
+            Temp: 86.84&deg
+          </p>
+          <p class="card-text" id="humidity4">
+            Humidity: 43%
+          </p>
+        </div>
+      </div>
+
+      <div class="card Day5 col-md-3 m-3 bg-primary shadow" style="max-width: fit-content;">
+        <div class="card-body ">
+          <h5 class="card-title" id="5thDate">Day 5</h5>
+          <img class="icon pt-4 pb-4" id="icon5" src="" alt="weather icon">
+          <p class="card-text" id="temp5">
+            Temp: 86.84&deg
+          </p>
+          <p class="card-text" id="humidity5">
+            Humidity: 43%
+          </p>
+        </div>
+      </div>
+
+    </div>
+
+    </div>
+
+
+
+    </div>
+
+
+
+
+
+
+
+
+    </div>
     </div>
   </main>
 
