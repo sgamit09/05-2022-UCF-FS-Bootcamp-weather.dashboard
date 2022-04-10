@@ -21,7 +21,6 @@
     <div class="col-12 col-md-4">
 
       <div class="card">
-        <h3 class="card-header text-uppercase">Search for a City:</h3>
         <form id="user-form" class="card-body">
           <label class="form-label" for="username"></label>
           <input name="username" id="username" type="text" autofocus="true" class="form-input" />
@@ -30,7 +29,7 @@
       </div>
 
       <div class="card">
-        <h3 class="card-header text-uppercase">Cities Searched:</h3>
+        <!-- <h3 class="card-header text-uppercase">Cities Searched:</h3> -->
         <div id="cities-searched" class="card-body">
           <button data-language="javascript" class="btn">JavaScript</button>
           <button data-language="html" class="btn">HTML</button>
@@ -40,7 +39,7 @@
     </div>
 
     <div class="col-12 col-md-8">
-      <h2 class="city-name">City-Name: <span id="city-search-term"></span></h2>
+      <h2 class="city-name" class="city-name align-middle">City-Name: <span id="city-search-term"></span></h2>
       <!-- There needs to be an empty HTML element for us to write repository data to. -->
       <div id="temp-container" class="list-group">Temp: </div>
       <div id="wind-container" class="list-group">Wind: </div>
@@ -48,81 +47,18 @@
       <div id="UV-container" class="list-group">UV Index: </div>
     </div>
 
-
-    <div class="mt-4">
-      <h4> 5-Day Forecast</h4>
-    </div>
-
-    <div class="row text-white">
-      <div class="card Day2 col-md-3 m-3 bg-primary shadow" style="max-width: fit-content;">
-        <div class="card-body ">
-          <h5 class="card-title" id="2ndDate">Day 2</h5>
-          <img class="icon pt-4 pb-4" id="icon2" src="" alt="weather icon">
-          <p class="card-text" id="temp2">
-
-          </p>
-          <p class="card-text" id="humidity2">
-
-          </p>
-        </div>
+    <div class="row d-none" id="fiveday-header">
+      <div class="col-12">
+          <h3>5-Day Forecast</h3>
       </div>
-
-      <div class="card Day3 col-md-3 m-3 bg-primary shadow" style="max-width: fit-content;">
-        <div class="card-body ">
-          <h5 class="card-title" id="3rdDate">Day 3</h5>
-          <img class="icon pt-4 pb-4" id="icon3" src="" alt="weather icon">
-          <p class="card-text" id="temp3">
-            Temp: 86.84&deg
-          </p>
-          <p class="card-text" id="humidity3">
-            Humidity: 43%
-          </p>
-        </div>
-      </div>
-
-      <div class="card Day4 col-md-3 m-3 bg-primary shadow" style="max-width: fit-content;">
-        <div class="card-body ">
-          <h5 class="card-title" id="4thDate">Day 4</h5>
-          <img class="icon pt-4 pb-4" id="icon4" src="" alt="weather icon">
-          <p class="card-text" id="temp4">
-            Temp: 86.84&deg
-          </p>
-          <p class="card-text" id="humidity4">
-            Humidity: 43%
-          </p>
-        </div>
-      </div>
-
-      <div class="card Day5 col-md-3 m-3 bg-primary shadow" style="max-width: fit-content;">
-        <div class="card-body ">
-          <h5 class="card-title" id="5thDate">Day 5</h5>
-          <img class="icon pt-4 pb-4" id="icon5" src="" alt="weather icon">
-          <p class="card-text" id="temp5">
-            Temp: 86.84&deg
-          </p>
-          <p class="card-text" id="humidity5">
-            Humidity: 43%
-          </p>
-        </div>
-      </div>
-
-    </div>
-
-    </div>
-
-
-
-    </div>
-
-
-
-
-
-
-
-
-    </div>
-    </div>
+  </div>
+  <div class="row">
+      <div class="col-md-2 forecast bg-primary text-white m-2 rounded"></div>
+      <div class="col-md-2 forecast bg-primary text-white m-2 rounded"></div>
+      <div class="col-md-2 forecast bg-primary text-white m-2 rounded"></div>
+      <div class="col-md-2 forecast bg-primary text-white m-2 rounded"></div>
+      <div class="col-md-2 forecast bg-primary text-white m-2 rounded"></div>
+  </div>
   </main>
 
   <script src="./assets/js/homepage.js"></script>
