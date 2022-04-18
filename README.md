@@ -25,7 +25,7 @@ To begin the weather dashboard, you need to search a city. Next the city will be
 
 ## Link to Weather Dashboard
 
- https://sgamit09.github.io/password.generator/
+https://sgamit09.github.io/weather.dashboard/
  
 ## Authors
 
